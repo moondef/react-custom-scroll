@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:moondef/react-customizable-scroll.git"
+    "url": "git+ssh://git@github.com/moondef/react-customizable-scroll.git"
   },
   "author": "Guy Romm && forked by moondef",
   "license": "MIT",
@@ -71,5 +71,8 @@
     "ui component",
     "ui",
     "component"
-  ]
+  ],
+  "directories": {
+    "example": "example"
+  }
 }
