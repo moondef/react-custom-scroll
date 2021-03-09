@@ -1,17 +1,17 @@
 [![NPM version][npm-image]][npm-url]
-![](https://github.com/rommguy/react-custom-scroll/workflows/build/badge.svg)
-![](https://img.shields.io/npm/dw/react-custom-scroll)
+![](https://github.com/moondef/react-customizable-scroll/workflows/build/badge.svg)
+![](https://img.shields.io/npm/dw/react-customizable-scroll)
 
 
-# React-Custom-Scroll
+# React-Customizable-Scroll
 An easily designable, cross browser (!!), custom scroll with ReactJS  
 Animations and scroll rate **exactly** like native scroll 
 
-##### See a [working demo](http://rommguy.github.io/react-custom-scroll/example/demo.html) ###
+##### See a [working demo](http://moondef.github.io/react-customizable-scroll/example/demo.html) ###
 
 ## Installation
 ```sh
-npm i react-custom-scroll --save
+npm i react-customizable-scroll --save
 ```
 
 ### Why do I need this ?  
@@ -24,15 +24,15 @@ There is also a UMD version - inside dist directory.
 In both cases **you have to include the customScroll.css** file in your page.  
 It is located in /dist directory       
 **From unpkg cdn:**      
-* [Js file](https://unpkg.com/react-custom-scroll@4.2.2/dist/reactCustomScroll)
-* [css file](https://unpkg.com/react-custom-scroll@4.2.2/dist/customScroll.css) 
+* [Js file](https://unpkg.com/react-customizable-scroll@4.2.2/dist/reactCustomScroll)
+* [css file](https://unpkg.com/react-customizable-scroll@4.2.2/dist/customScroll.css) 
 
 Wrap your content with the custom scroll component  
 Remove any overflow style properties from your content root component - The custom scroll will take care of it
 
 
 ```js
-import CustomScroll from 'react-custom-scroll';
+import CustomScroll from 'react-customizable-scroll';
 ```
 
 ```jsx
@@ -64,7 +64,7 @@ This prop will override any value given to heightRelativeToParent when setting t
 - **minScrollHandleHeight** : number, sets the mimimum height of the scroll handle. Default is 38, as in Chrome on OSX.
 - **rtl** : boolean, default false. Right to left document, will place the custom scrollbar on the left side of the content, and assume the native one is also there.
 - **scrollTo**: number, default undefined. Will scroll content to the given value.
-- **keepAtBottom**: boolean, default false. For dynamic content, will keep the scroll position at the bottom of the content, when the content changes, if the position was at the bottom before the change. [See example here](http://rommguy.github.io/react-custom-scroll/example/demo.html?dynamic=true)
+- **keepAtBottom**: boolean, default false. For dynamic content, will keep the scroll position at the bottom of the content, when the content changes, if the position was at the bottom before the change. [See example here](http://moondef.github.io/react-customizable-scroll/example/demo.html?dynamic=true)
 
 ##### Example for heightRelativeToParent
 
@@ -86,7 +86,7 @@ starting with lower case causes JSX to treat the tag as a native dom element
 - You can use CustomScroll types by installing @types/react-custom-scroll from npm
 
 ### Usage with flexbox
-##### See a [demo with Flex](http://rommguy.github.io/react-custom-scroll/example/demo.html?flex=true) ###
+##### See a [demo with Flex](http://moondef.github.io/react-customizable-scroll/example/demo.html?flex=true) ###
 There are some details that apply when using customScroll on elements with size set by css flex.  
 Here is an example for an HTML structure before using customScroll:  
 
