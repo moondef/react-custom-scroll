@@ -88,7 +88,7 @@ class CustomScroll extends Component {
     this.hideScrollThumb.cancel()
     document.removeEventListener('mousemove', this.onHandleDrag)
     document.removeEventListener('mouseup', this.onHandleDragEnd)
-    
+
     if (this.innerContainerRef.current) {
       this.innerContainerRef.current.removeEventListener('wheel', this.blockOuterScroll)
     }
@@ -236,6 +236,11 @@ class CustomScroll extends Component {
     this.setState({
       onDrag: true
     })
+
+    if (this.props.onDragStart) {
+      this.props.onDragStart()
+    }
+
     document.addEventListener('mousemove', this.onHandleDrag, { passive: false })
     document.addEventListener('mouseup', this.onHandleDragEnd, { passive: false })
   }
@@ -263,6 +268,11 @@ class CustomScroll extends Component {
       onDrag: false
     })
     e.preventDefault()
+
+    if (this.props.onDragEnd) {
+      this.props.onDragEnd()
+    }
+
     document.removeEventListener('mousemove', this.onHandleDrag)
     document.removeEventListener('mouseup', this.onHandleDragEnd)
   }
@@ -369,11 +379,7 @@ class CustomScroll extends Component {
                 className={`${styles.customScrollbar} ${this.props.rtl ? styles.customScrollbarRtl : ''}`}
                 key="scrollbar"
               >
-                <div
-                  ref={this.scrollHandleRef}
-                  className={styles.customScrollHandle}
-                  style={scrollHandleStyle}
-                >
+                <div ref={this.scrollHandleRef} className={styles.customScrollHandle} style={scrollHandleStyle}>
                   <div className={this.props.handleClass} />
                 </div>
               </div>
@@ -385,11 +391,7 @@ class CustomScroll extends Component {
             style={scrollStyles.innerContainer}
             onScroll={this.onScroll}
           >
-            <div
-              className={styles.contentWrapper}
-              ref={this.contentWrapperRef}
-              style={scrollStyles.contentWrapper}
-            >
+            <div className={styles.contentWrapper} ref={this.contentWrapperRef} style={scrollStyles.contentWrapper}>
               {this.props.children}
             </div>
           </div>
@@ -406,6 +408,8 @@ try {
     allowOuterScroll: PropTypes.bool,
     heightRelativeToParent: PropTypes.string,
     onScroll: PropTypes.func,
+    onDragStart: PropTypes.func,
+    onDragEnd: PropTypes.func,
     addScrolledClass: PropTypes.bool,
     freezePosition: PropTypes.bool,
     handleClass: PropTypes.string,
