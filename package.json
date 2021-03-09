@@ -1,6 +1,6 @@
 {
-  "name": "react-custom-scroll",
-  "version": "4.2.2",
+  "name": "react-customizable-scroll",
+  "version": "1.0.0",
   "description": "An easily designable, cross browser (!!), custom scroll with ReactJS Animations and scroll rate **exactly** like native scroll",
   "main": "index",
   "scripts": {
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:rommguy/react-custom-scroll.git"
+    "url": "git@github.com:moondef/react-customizable-scroll.git"
   },
-  "author": "Guy Romm",
+  "author": "Guy Romm && forked by moondef",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rommguy/react-custom-scroll/issues"
+    "url": "https://github.com/moondef/react-customizable-scroll/issues"
   },
-  "homepage": "https://github.com/rommguy/react-custom-scroll#readme",
+  "homepage": "https://github.com/moondef/react-customizable-scroll#readme",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.8.4",
